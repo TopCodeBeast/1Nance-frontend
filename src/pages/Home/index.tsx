@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from 'components/Header'
-import { HomeComponent, IOCComponent, SolutionsComponent } from 'components/DynaComponent'
+import { HomeComponent, IOCComponent, SolutionsComponent, TokenSaleComponent, WhitepaperComponent } from 'components/DynaComponent'
 
 const Home: React.FC = () => {
   return (
@@ -9,6 +9,8 @@ const Home: React.FC = () => {
       <HomeComponent />
       <IOCComponent />
       <SolutionsComponent />
+      <WhitepaperComponent />
+      <TokenSaleComponent />
     </div>
   )
 }

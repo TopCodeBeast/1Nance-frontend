@@ -2,9 +2,9 @@
 import { NavLink } from "react-router-dom";
 // import ReactCountryFlag from "react-country-flag";
 import Logo from "assets/png/logo.png"
-import USFlag from "assets/png/unidos.png"
+import USFlag from "assets/png/estados-unidos1.png"
 import { ChevronDownIcon } from '@heroicons/react/solid'
-import Button from "components/Button";
+import { CommonButton } from "components/ButtonComponent";
 
 const Header: React.FC = () => {
 
@@ -44,12 +44,12 @@ const Header: React.FC = () => {
           </NavLink>
           <NavLink to="/more" className={`${getNavLinkClassName} flex flex-rows`}>
             <div className="flex items-center gap-1">
-              <img src={USFlag} alt="usflag" />
+              <img src={USFlag} className="w-full w-8 h-8" alt="usflag" />
               <div>EN</div>
               <ChevronDownIcon className="w-6 h-6" />
             </div>
           </NavLink>
-          <Button url="/" title="Sign In" isSmall></Button>
+          <CommonButton url="/" title="Sign In" isSmall />
         </div>
       </div>
     </div>

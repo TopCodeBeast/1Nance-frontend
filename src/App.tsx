@@ -9,17 +9,15 @@ const App: React.FC = () => {
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
         <div className='bg-cover bg-mobileBackground laptop:bg-background'>
-          <div>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/ICO" component={Home} />
-              <Route exact path="/Solutions" component={Home} />
-              <Route exact path="/WhitePaper" component={Home} />
-              <Route exact path="/TokenSale" component={Home} />
-              <Route exact path="/Roadmap" component={Home} />
-              <Route exact path="/More" component={Home} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/ico" component={Home} />
+            <Route exact path="/solutions" component={Home} />
+            <Route exact path="/whitePaper" component={Home} />
+            <Route exact path="/tokenSale" component={Home} />
+            <Route exact path="/roadmap" component={Home} />
+            <Route exact path="/more" component={Home} />
+          </Switch>
         </div>
       </Suspense>
     </Router>
