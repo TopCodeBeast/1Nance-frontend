@@ -1,11 +1,13 @@
-type Props = {
-  illust: any
-  title?: any
-  content: any
-  isRTL?: boolean
+import React from 'react'
+
+interface IllustComponentProps {
+  illust: any,
+  title?: any,
+  content: any,
+  isRTL?: boolean,
 }
 
-const IllustComponent = ({ illust, title = "", content, isRTL = false }: Props) => {
+const IllustComponent: React.FC<IllustComponentProps> = ({ illust, title = "", content, isRTL = false }) => {
   return (
     <div className="flex gap-x-24 m-auto items-center">
       <div className={`flex ${isRTL && "order-last"} min-w-[30%] justify-center`}><img src={illust} alt="Illust" /></div>

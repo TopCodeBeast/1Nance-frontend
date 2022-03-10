@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from 'components/Header'
 import { HomeComponent } from 'components/DynaComponent'
 import IllustComponent from 'components/IllustComponent'
 import ilustrPoorarkitectr1 from 'assets/svg/ilustrPoorarkitectr1.svg'
@@ -9,7 +10,8 @@ import ilustrBadlenguagesupport1 from 'assets/svg/ilustrBadlenguagesupport1.svg'
 
 const Home: React.FC = () => {
   return (
-    <div className='pt-[97px] m-auto'>
+    <div className="m-auto">
+      <Header />
       <div className="grid m-44">
         <HomeComponent />
       </div>

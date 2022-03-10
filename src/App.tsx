@@ -12,6 +12,12 @@ const App: React.FC = () => {
           <div>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/ICO" component={Home} />
+              <Route exact path="/Solutions" component={Home} />
+              <Route exact path="/WhitePaper" component={Home} />
+              <Route exact path="/TokenSale" component={Home} />
+              <Route exact path="/Roadmap" component={Home} />
+              <Route exact path="/More" component={Home} />
             </Switch>
           </div>
         </div>
