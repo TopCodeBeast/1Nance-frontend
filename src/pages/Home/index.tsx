@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from 'components/Header'
-import { HomeComponent, IOCComponent, SolutionsComponent, TokenSaleComponent, WhitepaperComponent } from 'components/DynaComponent'
+import Header from '../../components/Header'
+import { HomeComponent, IOCComponent, MobileAppComponent, OurCoinComponent, RoadmapComponent, SolutionsComponent, TeamComponent, TokenDistributionComponent, TokenSaleComponent, WhitepaperComponent } from '../../components/DynaComponent'
+import Footer from '../../components/Footer'
 
 const Home: React.FC = () => {
   return (
@@ -11,6 +12,12 @@ const Home: React.FC = () => {
       <SolutionsComponent />
       <WhitepaperComponent />
       <TokenSaleComponent />
+      <MobileAppComponent />
+      <RoadmapComponent />
+      <OurCoinComponent />
+      <TokenDistributionComponent />
+      <TeamComponent />
+      <Footer />
     </div>
   )
 }

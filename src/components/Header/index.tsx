@@ -1,10 +1,9 @@
 // import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-// import ReactCountryFlag from "react-country-flag";
-import Logo from "assets/png/logo.png"
-import USFlag from "assets/png/estados-unidos1.png"
+import Logo from "../../assets/png/logo.png"
+import USFlag from "../../assets/png/estados-unidos1.png"
 import { ChevronDownIcon } from '@heroicons/react/solid'
-import { CommonButton } from "components/ButtonComponent";
+import { CommonButton } from "../../components/ButtonComponent";
 
 const Header: React.FC = () => {
 
