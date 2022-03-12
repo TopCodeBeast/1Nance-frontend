@@ -7,9 +7,9 @@ interface TitleComponentProps {
 const TitleComponent: React.FC<TitleComponentProps> = ({ anchor, title, content }) => {
   return (
     <div className="grid justify-items-center gap-2 my-16" id={anchor}>
-      <p className="text-center uppercase font-bold text-[36px]">{title}</p>
+      <p className="text-center uppercase font-bold text-[36px] tracking-wider">{title}</p>
       <div className="w-[150px] h-[5px] bg-gradient-to-r from-[#FFAF10] to-[#F97919]" />
-      <p className="text-center text-[24px] font-light mt-8 max-w-5xl">{content}</p>
+      <p className="text-center text-[24px] font-light mt-8 max-w-5xl tracking-wider">{content}</p>
     </div>
   )
 }
