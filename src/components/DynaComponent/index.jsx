@@ -1,13 +1,13 @@
-import IllustComponent from '../../components/IllustComponent'
+import IllustComponent from '../IllustComponent'
 import ilustrHome1nance1 from '../../assets/svg/ilustrHome1nance1.svg'
-import ilustrWhatisICO1 from '../../assets/svg/ilustrWhatisICO1.svg'
+import ilustrWhatisICO1 from '../../assets/png/ilustrWhatisICO1.png'
 import ilustrPoorarkitectr1 from '../../assets/svg/ilustrPoorarkitectr1.svg'
 import ilustrWebinsegura2 from '../../assets/svg/ilustrWebinsegura2.svg'
 import ilustr9 from '../../assets/png/ilustr9.png'
 import ilustrBadservice1 from '../../assets/svg/ilustrBadservice1.svg'
 import ilustrBadlenguagesupport1 from '../../assets/svg/ilustrBadlenguagesupport1.svg'
 import _1nanceWhite from '../../assets/svg/_1nanceWhite.svg'
-import ilustrAppMobile1 from '../../assets/svg/ilustrAppMobile1.svg'
+import ilustrAppMobile1 from '../../assets/png/ilustrAppMobile1.png'
 import Capa2 from "../../assets/svg/Capa2.svg"
 import subir1 from "../../assets/svg/subir1.svg"
 import change1 from "../../assets/svg/change1.svg"
@@ -18,21 +18,22 @@ import USFlag from "../../assets/png/estados-unidos1.png"
 import android1 from "../../assets/png/android1.png"
 import apple1 from "../../assets/png/apple1.png"
 
-import { CommonButton, DownloadButton } from '../../components/ButtonComponent'
+import Flipclock from "react-simple-flipclock"
+import { CommonButton, DownloadButton, PlayButton } from '../ButtonComponent'
 import TitleComponent from './TitleComponent'
-import { TokenSaleStepComponent } from '../../components/StepComponent'
+import { TokenSaleStepComponent } from '../StepComponent'
 import ArrowComponent from './ArrowComponent'
-import MemberComponent from '../../components/MemberComponent'
+import MemberComponent from '../MemberComponent'
 
-export const HomeComponent = () => {
+export const HomeComponent = ({ handler }) => {
   return (
     <div className="grid m-24">
       <div className="flex m-auto items-center">
         <div className="grid w-1/2 justify-items-end gap-12">
           <p className="font-medium text-4xl text-center leading-[46.88px] px-6 w-4/5 place-items-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <div className="flex gap-3 w-4/5 justify-center">
-            <CommonButton title="Purchase Token" className="text-[24px] leading-[28px] py-4" />
-            <CommonButton title="Whitepaper" className="text-[24px] leading-[28px] py-4" />
+            <CommonButton title="Purchase Token" handler={() => handler('tokensale')} className="text-[24px] leading-[28px] py-4" />
+            <CommonButton title="Whitepaper" handler={() => handler('whitepaper')} className="text-[24px] leading-[28px] py-4" />
           </div>
         </div>
         <div className="w-1/2">
@@ -44,16 +45,17 @@ export const HomeComponent = () => {
 }
 
 export const IOCComponent = () => {
+  const handlePlay = () => { }
   return (
     <div className="grid m-24">
       <TitleComponent anchor="ico" title="What is Crypto ICO" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex m-auto items-center space-x-12">
-        <div className="grid w-1/2 justify-items-end">
-          <p className="font-medium text-[24px] text-center leading-[28.13px] px-6 w-2/3 place-items-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</p>
-        </div>
-        <div className="w-1/2">
-          <img src={ilustrWhatisICO1} alt="IOC ilustr" />
-        </div>
+        <div className="flex gap-x-24 m-auto items-center">
+          <div className="order-last min-w-[30%] justify-center"><img src={ilustrWhatisICO1} alt="Illustrs" /><PlayButton handler={handlePlay} /></div>
+          <div className="flex-row space-y-4">
+            <div className="font-light text-[24px] leading-[28.13px] max-w-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra.</div>
+          </div>
+        </div >
       </div>
     </div>
   )
@@ -63,7 +65,7 @@ export const SolutionsComponent = () => {
   return (
     <div className="grid m-36">
       <TitleComponent anchor="solutions" title="Problems and Solutions" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
-      <div className="grid gap-48 mt-24">
+      <div className="grid gap-36 mt-24">
         <IllustComponent illust={ilustrPoorarkitectr1} title="POOR TECHNICAL ARCHITECTURE" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra." />
         <IllustComponent illust={ilustrWebinsegura2} title="INSECURE PLATFORM" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra." isRTL />
         <IllustComponent illust={ilustr9} title="POOR MARKET LIQUIDITY" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra." />
@@ -92,20 +94,29 @@ export const WhitepaperComponent = () => {
 }
 
 export const TokenSaleComponent = () => {
+  const fontSize = window.innerWidth / 1920 * 52
   return (
     <div className="grid m-36">
       <TitleComponent anchor="tokenSale" title="Token Sale" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex items-center gap-16 mt-20">
         <div className="grid w-1/2 h-full align-center justify-items-end">
-          <div className="grid justify-items-end rounded-[16px] p-10 pt-20 w-full h-full bg-gradient-to-b from-[#FFAF10] to-[#F97919]">
-            <div className="w-full bg-white h-20"></div>
-            <div className="flex w-full justify-center gap-24 mt-12">
+          <div className="grid justify-items-end rounded-[16px] p-10 pt-20 w-full h-full bg-gradient-to-b from-[#FFAF10] to-[#F97919]" >
+            <div className="grid w-full h-24 place-items-center justify-items-center mt-8">
+              <Flipclock
+                seconds={12 * 24 * 60 * 60}
+                dark={false}
+                fontSize={fontSize}
+                fontWeight={900}
+                fontFamily="fantasy"
+              />
+            </div>
+            <div className="flex w-full justify-center gap-24 mt-20">
               <TokenSaleStepComponent name="Pre-Sale" />
               <TokenSaleStepComponent name="Soft Cap" />
               <TokenSaleStepComponent name="Bonus" />
             </div>
             <div className="w-full bg-white rounded-full p-1.5 px-2"><div className="bg-gradient-to-r from-[#03185B] to-[#0040C1] rounded-[8px] w-2/3 h-6"></div></div>
-            <div className="grid justify-items-center mt-12 w-full" ><CommonButton title="Purchase Token" className="from-[#03185B] to-[#133295] text-white font-[500] rounded-[16px] text-[24px] leading-[28px] min-w-[250px] py-4" /></div>
+            <div className="grid justify-items-center mt-12 w-full" ><CommonButton title="Purchase Token" className="from-[#03185B] via-[#133295] to-[#03185B] text-white font-[500] rounded-[16px] text-[24px] leading-[28px] min-w-[250px] py-4" /></div>
           </div>
         </div>
         <div className="flex-row w-1/2 space-y-12">
@@ -127,7 +138,7 @@ export const TokenSaleComponent = () => {
 export const MobileAppComponent = () => {
   return (
     <div className="grid m-36">
-      <TitleComponent anchor="mobileApp" title="Mobile App" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
+      <TitleComponent anchor="mobile" title="Mobile App" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex items-center gap-16 m-auto mt-20">
         <div className="flex-row space-y-4">
           <div className="font-bold uppercase text-[28px] leading-[32.81px] max-w-xl">ANDROID &amp; IOS APP</div>
@@ -150,9 +161,9 @@ export const MobileAppComponent = () => {
 
 export const RoadmapComponent = () => {
   return (
-    <div className="grid my-36">
+    <div className="grid my-36 mb-0">
       <TitleComponent anchor="roadmap" title="Roadmap" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
-      <div className="grid gap-16 mt-20 bg-[url('./assets/svg/roadmap1nance1.svg')] bg-center bg-no-repeat min-h-[860px]">
+      <div className="grid gap-16 -mt-6 bg-[url('./assets/svg/roadmap1nance1.svg')] bg-center bg-no-repeat min-h-[860px]">
       </div>
     </div>
   )
@@ -160,7 +171,7 @@ export const RoadmapComponent = () => {
 
 export const OurCoinComponent = () => {
   return (
-    <div className="grid m-36">
+    <div className="grid m-36 my-0">
       <TitleComponent anchor="ourCoin" title="Our Coin" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt ac nisl pellentesque id tellus gravida." />
       <div className="flex items-center gap-16 m-auto mt-20">
         <IllustComponent illust={ilustrOurCoin1} title="1NANCE COIN" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sem suspendisse urna integer est. Ipsum vitae eu dui augue viverra. Enim purus erat commodo eleifend nec enim, ridiculus arcu in. Volutpat, aliquam consequat nulla lorem mauris. Adipiscing mauris eu ultrices et, volutpat, enim. Vitae pretium proin neque neque purus tellus ultrices accumsan. Habitant tellus faucibus volutpat viverra." />

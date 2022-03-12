@@ -19,7 +19,7 @@ const MemberComponent: React.FC<MemberComponentProps> = ({ profile = null, name,
       <div className="grid justify-items-start gap-1">
         <p className="flex font-bold text-[24px]">{name}</p>
         <p className="flex text-[18px]">{role}</p>
-        <IconButton handler={handler} icon={linkedin} />
+        <IconButton handler={handler} icon={linkedin} className="w-[24px] h-[24px]" />
       </div>
     </div>
   )
