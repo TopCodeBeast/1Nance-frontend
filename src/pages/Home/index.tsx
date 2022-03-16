@@ -31,7 +31,7 @@ const Home: React.FC = () => {
       let headerHeight: any = document.getElementById('header')?.offsetHeight
       if (headerHeight === 0) headerHeight = 70
       window.scrollTo({
-        top: topPos,
+        top: topPos - headerHeight,
         left: 0,
         behavior: 'smooth'
       })
